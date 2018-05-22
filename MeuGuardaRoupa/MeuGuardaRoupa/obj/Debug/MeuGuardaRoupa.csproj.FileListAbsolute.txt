@@ -1,0 +1,10 @@
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\bin\Debug\MeuGuardaRoupa.exe.config
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\bin\Debug\MeuGuardaRoupa.exe
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\bin\Debug\MeuGuardaRoupa.pdb
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.csprojResolveAssemblyReference.cache
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.ListaPeca.resources
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.Properties.Resources.resources
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.csproj.GenerateResource.Cache
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.exe
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.pdb
+C:\Users\105014\Desktop\MeuGuardaRoupa\MeuGuardaRoupa\obj\Debug\MeuGuardaRoupa.CadastroPeca.resources
