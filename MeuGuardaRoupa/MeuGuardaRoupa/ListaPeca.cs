@@ -25,12 +25,22 @@ namespace MeuGuardaRoupa
         private void AtualizarLista()
         {
             dgvListaPeca.Rows.Clear();
-
+            string busca = txtBusca.Text;
             for (int i = 0; i < Program.pecas.Count; i++)
             {
+
                 Peca peca = Program.pecas[i];
+                if (peca.Ativo == true &&
+                    
+                    (peca.Nome.Contains(busca) || peca.Marca.Contains(busca)))
+                {
                 dgvListaPeca.Rows.Add(new object[]{
                 peca.Nome, peca.Cor, peca.Marca, peca.Valor });
+                   
+                }
+                {
+                    
+                }
             }
             
         }
@@ -52,13 +62,15 @@ namespace MeuGuardaRoupa
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
+            int LinhaSelecionada = dgvListaPeca.CurrentRow.Index;
+
             if (dgvListaPeca.CurrentRow == null)
             {
                 MessageBox.Show("Não tem nenhuma peça selecionada");
             }
 
-            int LinhaSelecionada = dgvListaPeca.CurrentRow.Index;
+            
             Peca peca = Program.pecas[LinhaSelecionada];
             new CadastroPeca(peca, LinhaSelecionada).ShowDialog();
 
@@ -90,6 +102,24 @@ namespace MeuGuardaRoupa
             }
 
            
+        }
+
+        private void ListaPeca_Activated(object sender, EventArgs e)
+        {
+            AtualizarLista();
+        }
+
+        private void txtBusca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AtualizarLista();
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            AtualizarLista();
         }
 
     }

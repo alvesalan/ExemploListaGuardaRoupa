@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPeca));
             this.dgvListaPeca = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaPeca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +62,30 @@
             this.dgvListaPeca.Size = new System.Drawing.Size(920, 509);
             this.dgvListaPeca.TabIndex = 0;
             this.dgvListaPeca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPeca_CellContentClick);
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnCor
+            // 
+            this.ColumnCor.HeaderText = "Cor";
+            this.ColumnCor.Name = "ColumnCor";
+            this.ColumnCor.ReadOnly = true;
+            // 
+            // ColumnTipo
+            // 
+            this.ColumnTipo.HeaderText = "Tipo";
+            this.ColumnTipo.Name = "ColumnTipo";
+            this.ColumnTipo.ReadOnly = true;
+            // 
+            // ColumnValor
+            // 
+            this.ColumnValor.HeaderText = "Valor";
+            this.ColumnValor.Name = "ColumnValor";
+            this.ColumnValor.ReadOnly = true;
             // 
             // button3
             // 
@@ -101,30 +127,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnCor
-            // 
-            this.ColumnCor.HeaderText = "Cor";
-            this.ColumnCor.Name = "ColumnCor";
-            this.ColumnCor.ReadOnly = true;
-            // 
-            // ColumnTipo
-            // 
-            this.ColumnTipo.HeaderText = "Tipo";
-            this.ColumnTipo.Name = "ColumnTipo";
-            this.ColumnTipo.ReadOnly = true;
-            // 
-            // ColumnValor
-            // 
-            this.ColumnValor.HeaderText = "Valor";
-            this.ColumnValor.Name = "ColumnValor";
-            this.ColumnValor.ReadOnly = true;
-            // 
             // btnAtualizar
             // 
             this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,11 +140,31 @@
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Busca";
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.Location = new System.Drawing.Point(55, 52);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(367, 20);
+            this.txtBusca.TabIndex = 6;
+            this.txtBusca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusca_KeyDown);
+            this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
+            // 
             // ListaPeca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 599);
+            this.Controls.Add(this.txtBusca);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -150,9 +172,11 @@
             this.Controls.Add(this.dgvListaPeca);
             this.Name = "ListaPeca";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.ListaPeca_Activated);
             this.Load += new System.EventHandler(this.ListaPeca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaPeca)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,6 +191,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBusca;
     }
 }
 

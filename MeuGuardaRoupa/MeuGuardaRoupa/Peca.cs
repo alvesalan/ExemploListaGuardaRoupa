@@ -16,6 +16,7 @@ namespace MeuGuardaRoupa
         public string Cor;
         public DateTime DataCompra;
         public string Tecido;
+        public bool Ativo;
 
     }
 }

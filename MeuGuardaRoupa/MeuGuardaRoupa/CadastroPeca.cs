@@ -36,7 +36,7 @@ namespace MeuGuardaRoupa
             txtValor.Text = Convert.ToString(peca.Valor);
             cbCor.SelectedItem = peca.Cor;
             cbMarca.SelectedItem = peca.Marca;
-            cbTamanho.SelectedItem = peca.Tamanho;
+            cbTamanho.Text = peca.Tamanho;
             cbTecido.SelectedItem = peca.Tecido;
             cbTipo.SelectedItem = peca.Tipo;
             dtpDataCompra.Value = peca.DataCompra;
@@ -116,8 +116,11 @@ namespace MeuGuardaRoupa
                 MessageBox.Show("Data da compra incorreta porfavor digite uma data valida");
             }
 
+
             Peca peca = new Peca()
             {
+
+
                 Nome = txtNome.Text,
                 Cor = cbCor.SelectedItem.ToString(),
                 Marca = cbMarca.SelectedItem.ToString(),
@@ -125,7 +128,8 @@ namespace MeuGuardaRoupa
                 Tipo = cbTecido.SelectedItem.ToString(),
                 Valor = Convert.ToDouble(txtValor.Text),
                 Tecido = cbTecido.SelectedItem.ToString(),
-                DataCompra = dtpDataCompra.Value
+                DataCompra = dtpDataCompra.Value,
+                Ativo = rbStatusAtivo.Checked
 
             };
 
@@ -160,6 +164,11 @@ namespace MeuGuardaRoupa
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
